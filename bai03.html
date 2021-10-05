@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 03</title>
+</head>
+
+<body>
+    <script>
+        // Xây dựng hàm kiểm tra số đó là số Polinom (vd: 123321 là số Polinom)
+        var n = parseInt(prompt("Nhap so nguyen: "));
+        function polinom(n) {
+            var temp, mod, result;
+            result = 0;
+            temp = n;
+            while (temp > 0) {
+                mod = temp % 10;
+                temp = parseInt(temp / 10);
+                result = result * 10 + mod;
+            }
+            if (result == n) {
+                return n + " là số polinom";
+            } else {
+                return n + " không phải là số polinom";
+            }
+        }
+        console.log(polinom(n));
+    </script>
+</body>
+
+</html>

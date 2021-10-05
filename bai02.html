@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 02</title>
+</head>
+
+<body>
+    <script>
+        // Xây dựng hàm giải phương trình bậc 2
+        var a = parseInt(prompt("Nhap a"));
+        var b = parseInt(prompt("Nhap b"));
+        var c = parseInt(prompt("Nhap c"));
+        function PTB2(a, b, c) {
+            if (a == 0) {
+                if (b == 0) {
+                    return "PTVN!";
+                } else {
+                    return "PT có nghiệm là x = " + -b / a;
+                }
+                return;
+            }
+            var delta = b * b - 4 * a * c;
+            var x1 = x2 = 0;
+            if (delta > 0) {
+                x1 = -b + Math.sqrt(delta) / (2 * a);
+                x2 = - b - Math.sqrt(delta) / (2 * a);
+                return "PT có 2 nghiệm phân biệt là:<br> x1 = " + x1 + "<br>x2 = " + x2;
+            } else if (delta == 0) {
+                x1 = (-b / (2 * a));
+                return "PT có nghiệm kép là: x1 = x2 = " + x1;
+            } else {
+                return "PTVN!";
+            }
+        }
+        console.log(PTB2(a, b, c));
+    </script>
+</body>
+
+</html>
